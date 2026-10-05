@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="BookMark.Client/BookMark.Client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="BookMark.Server/BookMark.Server.csproj" />
+</Solution>
