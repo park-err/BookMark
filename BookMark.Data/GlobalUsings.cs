@@ -1,0 +1,1 @@
+﻿global using BookMark.Domain.Entity;
