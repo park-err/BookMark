@@ -4,6 +4,8 @@ using BookMark.Server.Config;
 using BookMark.Server.Handlers;
 using Microsoft.Extensions.Options;
 using BookMark.Server.Middleware;
+using BookMark.Data.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,8 +36,8 @@ var connectionString = new SqlConnectionStringBuilder(builder.Configuration.GetC
     Password = builder.Configuration["BookMarkDb:Password"]!
 };
 
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(csb.ConnectionString));
+builder.Services.AddDbContext<BookMarkDbContext>(options =>
+    options.UseSqlServer(connectionString.ConnectionString));
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
