@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using BookMark.Data.Entities;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BookMark.Data.Data.Configurations
 {

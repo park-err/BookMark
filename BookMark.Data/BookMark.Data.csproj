@@ -14,4 +14,8 @@
     <ProjectReference Include="..\BookMark.Domain\BookMark.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DependencyInjection\" />
+  </ItemGroup>
+
 </Project>
