@@ -9,9 +9,9 @@ namespace BookMark.Server.Controllers
     public class CatalogController(ICatalogService service) : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult> TestResult()
+        public async Task<IActionResult> TestResult([FromQuery] string q)
         {
-            var result = await service.GetBookAsync("flowers+inauthor:keyes");
+            var result = await service.GetBookAsync(q);
             return Ok(result);
         }
     }

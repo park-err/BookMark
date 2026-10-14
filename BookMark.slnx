@@ -3,5 +3,7 @@
     <Build />
     <Deploy />
   </Project>
+  <Project Path="BookMark.Data/BookMark.Data.csproj" Id="aef29056-f4f2-4bf6-94e8-9e261b8fab00" />
+  <Project Path="BookMark.Domain/BookMark.Domain.csproj" Id="f4929693-a3af-469b-ad08-5d197699231f" />
   <Project Path="BookMark.Server/BookMark.Server.csproj" />
 </Solution>

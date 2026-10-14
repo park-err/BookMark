@@ -1,8 +1,11 @@
+using Microsoft.Data.SqlClient;
 using BookMark.Server.Services;
 using BookMark.Server.Config;
 using BookMark.Server.Handlers;
 using Microsoft.Extensions.Options;
 using BookMark.Server.Middleware;
+using Microsoft.EntityFrameworkCore;
+using BookMark.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +29,15 @@ builder.Services.AddHttpClient<ICatalogService, CatalogService>((provider, clien
     client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 })
     .AddHttpMessageHandler<RetryHandler>();
+
+// Connection string
+var connectionString = new SqlConnectionStringBuilder(builder.Configuration.GetConnectionString("BookMarkDb")) {
+    UserID = builder.Configuration["BookMarkDb:UserId"]!,  
+    Password = builder.Configuration["BookMarkDb:Password"]!
+};
+
+// Register BookMark.Data services
+builder.Services.AddBookMarkData(connectionString.ConnectionString);
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
