@@ -1,4 +1,4 @@
-﻿namespace BookMark.Server.Services
+﻿namespace BookMark.Application.Interfaces
 {
     public interface ICatalogService
     {

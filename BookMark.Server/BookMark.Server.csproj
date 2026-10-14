@@ -27,6 +27,7 @@
     <ProjectReference Include="..\BookMark.Client\BookMark.Client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\BookMark.Application\BookMark.Application.csproj" />
     <ProjectReference Include="..\BookMark.Data\BookMark.Data.csproj" />
   </ItemGroup>
 

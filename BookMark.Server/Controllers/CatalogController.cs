@@ -1,5 +1,4 @@
-﻿using BookMark.Server.Services;
-using Microsoft.AspNetCore.Http;
+﻿using BookMark.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookMark.Server.Controllers
