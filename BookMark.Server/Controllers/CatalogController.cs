@@ -10,6 +10,7 @@ namespace BookMark.Server.Controllers
         [HttpGet]
         public async Task<IActionResult> TestResult([FromQuery] string q)
         {
+            // ex. flowers+inauthor:keyes
             var result = await service.GetBookAsync(q);
             return Ok(result);
         }

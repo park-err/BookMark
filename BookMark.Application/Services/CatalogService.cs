@@ -1,4 +1,6 @@
-﻿namespace BookMark.Application.Services
+﻿using BookMark.Application.Interfaces;
+
+namespace BookMark.Application.Services
 {
     public class CatalogService : ICatalogService
     {
