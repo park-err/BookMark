@@ -1,11 +1,12 @@
 using Microsoft.Data.SqlClient;
-using BookMark.Server.Services;
-using BookMark.Server.Config;
+using BookMark.Application.Services;
+using BookMark.Application.Config;
 using BookMark.Server.Handlers;
 using Microsoft.Extensions.Options;
 using BookMark.Server.Middleware;
 using Microsoft.EntityFrameworkCore;
 using BookMark.Data;
+using BookMark.Application.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
